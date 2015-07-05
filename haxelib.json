@@ -9,5 +9,6 @@
     "releasenote": "Initial release.",
     "contributors": ["explorigin"],
     "dependencies": {
+        "es6-externs": "~0.1.0"
     }
 }

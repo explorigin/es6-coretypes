@@ -1,5 +1,7 @@
 package haxe.ds;
 
+#if js
+
 @:coreApi class WeakMap<K: {}, V> implements haxe.Constraints.IMap<K, V> {
     var m = new js.WeakMap<K, V>();
     var _keys = new Array<K>();
@@ -27,3 +29,5 @@ package haxe.ds;
         return "WeakMap()";
     }
 }
+
+#end

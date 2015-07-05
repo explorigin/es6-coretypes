@@ -1,5 +1,7 @@
 package haxe.ds;
 
+#if js
+
 @:coreApi class IntMap<T> implements haxe.Constraints.IMap<Int, T> {
     var m = new js.Map<Int, T>();
 
@@ -25,3 +27,5 @@ package haxe.ds;
         return "{" + [for (key in keys()) '$key => ${get(key)}'].join(', ') + "}";
     }
 }
+
+#end
