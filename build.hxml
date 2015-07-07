@@ -5,6 +5,3 @@
 -dce full
 -main TestRunner
 -js test.js
-
-
-
