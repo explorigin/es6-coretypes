@@ -2,28 +2,30 @@ package haxe.ds;
 
 #if js
 
-@:coreApi class ObjectMap<K:{ }, T> implements haxe.Constraints.IMap<K, T> {
-    var m = new js.Map<K, T>();
+import js.tools.IteratorAdapter;
 
-    public function new() {};
+@:coreApi
+@:native("Map")
+extern class ObjectMap<K: {}, V> implements haxe.Constraints.IMap<K, V> {
+    public function new();
 
-    public inline function set( key : K, value : T ) : Void m.set(key, value);
+    public function set(key:K, value:V):Void;
 
-    public inline function get( key : K ) : Null<T> return m.get(key);
+    @:arrayAccess public inline function get(key:K):Null<V> return (untyped this).get(key);
 
-    public inline function exists( key : K ) : Bool return m.has(key);
+    public inline function remove( key : K ) : Bool return (untyped this).delete(key);
 
-    public inline function remove( key : K ) : Bool return m.delete(key);
+    public inline function exists( key : K ) : Bool return (untyped this).has(key);
 
-    public function keys() : Iterator<K> {
-        return new js.tools.IteratorAdapter<K>(m.keys());
+    public inline function keys(): Iterator<K> {
+        return new IteratorAdapter<K>((untyped this).keys());
     }
 
-    public inline function iterator() : Iterator<T> {
-        return new js.tools.IteratorAdapter<T>(m.values());
+    public inline function iterator() : Iterator<V> {
+        return new IteratorAdapter<V>((untyped this).values());
     }
 
-    public function toString() : String {
+    public inline function toString() : String {
         return "{" + [for (key in keys()) '$key => ${get(key)}'].join(', ') + "}";
     }
 }
