@@ -4,7 +4,6 @@ import haxe.ds.ObjectMap;
 import haxe.ds.EnumValueMap;
 import haxe.Constraints.IMap;
 
-#if js
 import js.tools.IteratorAdapter;
 
 @:native("Map")
@@ -68,5 +67,3 @@ extern class Map<K, V> implements IMap<K, V> {
         return cast map;
     }
 }
-
-#end
