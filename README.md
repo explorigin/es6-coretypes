@@ -11,7 +11,5 @@ To ensure that your platform can run the ES6 output correctly, run the tests.
 `test.html` is provided to run these tests in a browser.
 
 ## Haxe Core Types
-- StringMap, IntMap, ObjectMap
-    - implemented as a wrapper around ES6 Map type
-- WeakMap
-    - partially implemented as a wrapper around ES6 WeakMap type
+- StringMap, IntMap, ObjectMap, WeakMap
+    - natively uses ES6 type and wraps interators to be Haxe-compatible
