@@ -1,7 +1,16 @@
--cp src
+-cp macro-src
+-cp test-src
+-main TestRunner
+extraParams.hxml
+--interp
+
+--next
+
+-cp macro-src
 -cp test-src
 -D js-es5
 -lib es6-externs
 -dce full
 -main TestRunner
 -js test.js
+extraParams.hxml

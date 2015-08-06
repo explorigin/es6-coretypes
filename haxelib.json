@@ -5,7 +5,7 @@
     "tags": ["js", "web", "html5", "haxe", "javascript", "macro", "html", "ufront"],
     "description": "This library implements some core Haxe types as closely as possible with ES6 data structures and features.",
     "version": "0.1.0",
-    "classPath": "src/",
+    "classPath": "macro-src/",
     "releasenote": "Initial release.",
     "contributors": ["explorigin"],
     "dependencies": {

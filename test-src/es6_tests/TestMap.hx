@@ -25,6 +25,11 @@ class TestMap extends haxe.unit.TestCase {
         m.set('b', 2);
         m.set('c', 1);
 
+        #if js
+            // An ES6-specific test just to make sure we're using the ES6 construct
+            assertEquals(3, (untyped m).size);
+        #end
+
         for (key in m.keys()) {
             assertTrue(['a', 'b', 'c'].indexOf(key) != -1);
         }
@@ -53,6 +58,11 @@ class TestMap extends haxe.unit.TestCase {
         m.set(2, 'b');
         m.set(3, 'c');
         m.set(4, 'a');
+
+        #if js
+            // An ES6-specific test just to make sure we're using the ES6 construct
+            assertEquals(3, (untyped m).size);
+        #end
 
         for (key in m.keys()) {
             assertTrue([2, 3, 4].indexOf(key) != -1);
@@ -85,6 +95,11 @@ class TestMap extends haxe.unit.TestCase {
         m.set(keyA, 'b');
         m.set(keyB, 'c');
         m.set(keyC, 'a');
+
+        #if js
+            // An ES6-specific test just to make sure we're using the ES6 construct
+            assertEquals(3, (untyped m).size);
+        #end
 
         for (key in m.keys()) {
             assertTrue([keyA, keyB, keyC].indexOf(key) != -1);

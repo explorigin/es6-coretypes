@@ -1,7 +1,5 @@
 package haxe.ds;
 
-#if js
-
 @:coreApi
 @:native("WeakMap")
 extern class WeakMap<K: {}, V> implements haxe.Constraints.IMap<K, V> {
@@ -28,5 +26,3 @@ extern class WeakMap<K: {}, V> implements haxe.Constraints.IMap<K, V> {
         return "WeakMap()";
     }
 }
-
-#end
