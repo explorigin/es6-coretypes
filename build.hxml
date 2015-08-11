@@ -8,7 +8,6 @@ extraParams.hxml
 
 -cp macro-src
 -cp test-src
--D js-es5
 -lib es6-externs
 -dce full
 -main TestRunner
