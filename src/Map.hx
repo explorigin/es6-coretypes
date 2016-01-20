@@ -67,3 +67,6 @@ extern class Map<K, V> implements IMap<K, V> {
         return cast map;
     }
 }
+
+@:deprecated
+typedef IMap<K, V> = haxe.Constraints.IMap<K, V>;

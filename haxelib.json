@@ -4,9 +4,9 @@
     "license": "MIT",
     "tags": ["js", "web", "html5", "haxe", "javascript", "macro", "html", "ufront"],
     "description": "This library implements some core Haxe types as closely as possible with ES6 data structures and features.",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "classPath": "macro-src/",
-    "releasenote": "Initial release.",
+    "releasenote": "Add deprecated IMap for compatibility.",
     "contributors": ["explorigin"],
     "dependencies": {
         "es6-externs": ""
