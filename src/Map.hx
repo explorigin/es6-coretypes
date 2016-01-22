@@ -6,15 +6,13 @@ import haxe.Constraints.IMap;
 
 import js.tools.IteratorAdapter;
 
-@:native("Map")
 @:multiType(K)
-extern class Map<K, V> implements IMap<K, V> {
-    public var size(default, null):Int;
-
+abstract Map<K, V>(IMap<K, V>) {
     public function new();
 
-    public function set(key:K, value:V):Void;
-    public function clear():Void;
+    public inline function set(key:K, value:V):Void {
+        return cast(this).set(key, value);
+    }
 
     @:arrayAccess public inline function get(key:K):V return (untyped this).get(key);
 
